@@ -28,4 +28,21 @@ public class ChattingUI : NetworkBehaviour
         Text_ChatHistory.text = string.Empty;
     }
 
+    //서버에 메세지 실제로 보내는 함수 선언
+    [Command(requiresAuthority = false)]
+    void CommandSendMsg(string msg, NetworkConnectionToClient sender = null)
+    {
+
+    }
+
+    public void OnClick_SendMsg()
+    {
+        //채팅 UI 전송버튼 OnClick 이벤트 추가 및 연동
+        //OnClick_SendMsg에서 전송 함수 호출
+        var currentChatMsg = Input_ChatMsg.text;
+        if(!string.IsNullOrWhiteSpace(currentChatMsg))
+        {
+            CommandSendMsg(currentChatMsg.Trim());
+        }
+    }
 }

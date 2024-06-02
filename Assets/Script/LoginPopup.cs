@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
+using Org.BouncyCastle.Bcpg.Sig;
 
 public class LoginPopup : MonoBehaviour
 {
@@ -34,6 +35,18 @@ public class LoginPopup : MonoBehaviour
         SetDefaultNetworkAddress();
     }
 
+
+    private void OnEnable()
+    {
+        Input_UserName.onValueChanged.AddListener(OnValueChanged_ToggleButton);
+    }
+    //로그인 팝업 유저이름 변경 시 처리
+    private void OnDisable()
+    {
+        Input_UserName.onValueChanged.RemoveListener(OnValueChanged_ToggleButton);
+    }
+
+
     private void SetDefaultNetworkAddress()
     {
         //로그인 팝업 네트워크 주소 세팅부 추가
@@ -57,5 +70,13 @@ public class LoginPopup : MonoBehaviour
         {
             Input_NetworkAdress.text = NetworkManager.singleton.networkAddress;
         }
+    }
+
+    //로그인 팝업 유저이름 변경 시 처리
+    public void OnValueChanged_ToggleButton(string usreName)
+    {
+        bool isUserNameValid = !string.IsNullOrWhiteSpace(usreName);
+        Btn_StartAsHostServer.interactable = isUserNameValid;
+        Btn_StartAsClient.interactable = isUserNameValid;
     }
 }

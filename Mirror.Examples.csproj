@@ -65,8 +65,8 @@
     <Compile Include="Assets\Mirror\Examples\CouchCoop\Scripts\CouchPlayerManager.cs" />
     <Compile Include="Assets\Mirror\Examples\Benchmark\Scripts\BenchmarkNetworkManager.cs" />
     <Compile Include="Assets\Mirror\Examples\RigidbodyBenchmark\Scripts\RigidbodyBenchmarkNetworkManager.cs" />
-    <Compile Include="Assets\Mirror\Examples\BenchmarkStinkySteak\Dependencies\netcode-benchmarker-util\Runtime\Scripts\BehaviourWrapper\SinMoveYWrapper.cs" />
     <Compile Include="Assets\Mirror\Examples\BenchmarkStinkySteak\Dependencies\netcode-benchmarker-util\Runtime\Scripts\BehaviourConfig.cs" />
+    <Compile Include="Assets\Mirror\Examples\BenchmarkStinkySteak\Dependencies\netcode-benchmarker-util\Runtime\Scripts\BehaviourWrapper\SinMoveYWrapper.cs" />
     <Compile Include="Assets\Mirror\Examples\CCU\Player.cs" />
     <Compile Include="Assets\Mirror\Examples\TankTheftAuto\Scripts\TankController.cs" />
     <Compile Include="Assets\Mirror\Examples\BenchmarkStinkySteak\Dependencies\netcode-benchmarker-util\Runtime\Scripts\BehaviourWrapper\IMoveWrapper.cs" />
@@ -141,13 +141,13 @@
     <Compile Include="Assets\Mirror\Examples\Room\Scripts\Spawner.cs" />
     <Compile Include="Assets\Mirror\Examples\AdditiveScenes\Scripts\AdditiveNetworkManager.cs" />
     <Compile Include="Assets\Mirror\Examples\Room\Scripts\NetworkRoomManagerExt.cs" />
+    <Compile Include="Assets\Mirror\Examples\BenchmarkStinkySteak\Dependencies\netcode-benchmarker-util\Runtime\Scripts\BehaviourWrapper\SinRandomMoveWrapper.cs" />
     <Compile Include="Assets\Mirror\Examples\SyncDirection\Player.cs" />
     <Compile Include="Assets\Mirror\Examples\AdditiveScenes\Scripts\ShootingTankBehaviour.cs" />
-    <Compile Include="Assets\Mirror\Examples\BenchmarkStinkySteak\Dependencies\netcode-benchmarker-util\Runtime\Scripts\BehaviourWrapper\SinRandomMoveWrapper.cs" />
     <Compile Include="Assets\Mirror\Examples\Pong\Scripts\Player.cs" />
     <Compile Include="Assets\Mirror\Examples\LagCompensation\Snapshot3D.cs" />
-    <Compile Include="Assets\Mirror\Examples\BilliardsPredicted\Ball\WhiteBallPredicted.cs" />
     <Compile Include="Assets\Mirror\Examples\TankTheftAuto\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Mirror\Examples\BilliardsPredicted\Ball\WhiteBallPredicted.cs" />
     <Compile Include="Assets\Mirror\Examples\MultipleAdditiveScenes\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Mirror\Examples\CharacterSelection\Scripts\CharacterData.cs" />
     <Compile Include="Assets\Mirror\Examples\BenchmarkStinkySteak\Dependencies\Unity-Simulation-Timer\Runtime\SimulationTimer.cs" />
@@ -164,8 +164,8 @@
     <Compile Include="Assets\Mirror\Examples\Pong\Scripts\Ball.cs" />
     <Compile Include="Assets\Mirror\Examples\MultipleMatches\Scripts\CanvasController.cs" />
     <Compile Include="Assets\Mirror\Examples\CCU\CCUNetworkManager.cs" />
-    <Compile Include="Assets\Mirror\Examples\TankTheftAuto\Scripts\Projectile.cs" />
     <Compile Include="Assets\Mirror\Examples\CharacterSelection\Scripts\SceneReferencer.cs" />
+    <Compile Include="Assets\Mirror\Examples\TankTheftAuto\Scripts\Projectile.cs" />
     <Compile Include="Assets\Mirror\Examples\CouchCoop\Scripts\CanvasScript.cs" />
     <Compile Include="Assets\Mirror\Examples\BenchmarkStinkySteak\Dependencies\Unity-Simulation-Timer\Runtime\PauseableSimulationTimer.cs" />
   </ItemGroup>
@@ -535,6 +535,14 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.22f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Mono.CecilX">
+      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.CecilX.Mdb">
+      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -547,12 +555,24 @@
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.3.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Mono.CecilX.Pdb">
+      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Pdb.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.3.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Mono.CecilX.Rocks">
+      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Rocks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.3.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography">
+      <HintPath>Assets\Mirror\Plugins\BouncyCastle\BouncyCastle.Cryptography.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="log4netPlastic">
@@ -567,32 +587,12 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Mono.CecilX.Mdb">
-      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Mono.CecilX.Pdb">
-      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Pdb.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="BouncyCastle.Cryptography">
-      <HintPath>Assets\Mirror\Plugins\BouncyCastle\BouncyCastle.Cryptography.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Mono.CecilX">
-      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Mono.CecilX.Rocks">
-      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Rocks.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

@@ -48,12 +48,51 @@ public class ChattingUI : NetworkBehaviour
             var senderName = _connectedNameDic[sender];
             OnRecvMessage(senderName, msg.Trim());
         }
-
     }
 
     public void OnClick_Exit()
     {
         NetworkManager.singleton.StopHost();
+    }
+
+    [ClientRpc]
+    void OnRecvMessage(string senderName, string msg)
+    {
+        string formatedMsg = (senderName == _localPlayerName) ?
+            $"<color=red>{senderName}:</color> {msg}" :
+            $"<color=blue>{senderName}:</color> {msg}";
+
+        AppendMessage(formatedMsg);
+    }
+
+    //============================[UI]=========================
+    //채팅 UI / 메세지 UI 처리
+    void AppendMessage(string msg)
+    {
+        StartCoroutine(AppendAndScroll(msg));
+    }
+    IEnumerator AppendAndScroll(string msg)
+    {
+        Text_ChatHistory.text += msg + "\n";
+
+        yield return null;
+        yield return null;
+
+        Scrollbar_Chat.value = 0;
+    }
+
+    //==========================================================
+
+
+    //채팅 UI 전송버튼 OnClick 이벤트 추가 및 연동 
+    //서버에 메세지 실제로 보내는 함수 선언 / OnClick_SendMsg에서 전송할 함수 호출
+    public void OnClick_SnedMsg()
+    {
+        var currentChatMsg = Input_ChatMsg.text;
+        if (!string.IsNullOrWhiteSpace(currentChatMsg))
+        {
+            CommandSendMsg(currentChatMsg.Trim());
+        }
     }
 
     public void OnValueChanged_ToggleBetton(string input)
@@ -69,47 +108,5 @@ public class ChattingUI : NetworkBehaviour
         {
             OnClick_SnedMsg();
         }
-
-
-        [ClientRpc]
-        void OnRecvMessage(string senderName, string msg)
-        {
-            string formatedMsg = (senderName == _localPlayerName) ?
-                $"<color=red>{senderName}:</color> {msg}" :
-                $"<color=blue>{senderName}:</color> {msg}";
-
-            AppendMessage(formatedMsg);
-        }
-
-        //============================[UI]=========================
-        //채팅 UI / 메세지 UI 처리
-        void AppendMessage(string msg)
-        {
-            StartCoroutine(AppendAndScroll(msg));
-        }
-        IEnumerator AppendAndScroll(string msg)
-        {
-            Text_ChatHistory.text += msg + "\n";
-
-            yield return null;
-            yield return null;
-
-            Scrollbar_Chat.value = 0;
-        }
-
-        //==========================================================
-
-
-
-
-        //채팅 UI 전송버튼 OnClick 이벤트 추가 및 연동 
-        //서버에 메세지 실제로 보내는 함수 선언 / OnClick_SendMsg에서 전송할 함수 호출
-        public void OnClick_SnedMsg()
-        {
-            var currentChatMsg = Input_ChatMsg.text;
-            if (!string.IsNullOrWhiteSpace(currentChatMsg))
-            {
-                CommandSendMsg(currentChatMsg.Trim());
-            }
-        }
     }
+}

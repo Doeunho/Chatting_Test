@@ -6,6 +6,8 @@ using System.Collections;
 
 public class ChattingUI : NetworkBehaviour
 {
+
+    
     [Header("UI")]
     [SerializeField] Text Text_ChatHistory;
     [SerializeField] Scrollbar ScrollBar_Chat;

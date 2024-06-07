@@ -63,7 +63,7 @@
     <Compile Include="Assets\Chatting\Script\NetworkingManager.cs" />
     <Compile Include="Assets\Chatting\Script\ChattingUI.cs" />
     <Compile Include="Assets\Chatting\Script\ChatUser.cs" />
-    <Compile Include="Assets\NetDoggie\New Folder\Script\NetSpawnedObject.cs" />
+    <Compile Include="Assets\NetDoggie\Script\NetSpawnedObject.cs" />
     <Compile Include="Assets\Chatting\Script\NetworkingAuthenticator.cs" />
     <Compile Include="Assets\Chatting\Script\LoginPopup.cs" />
     <Compile Include="Assets\Chatting\Script\NetworkingAuthenticator_Client.cs" />

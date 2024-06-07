@@ -22,7 +22,7 @@ public class ChatUser : NetworkBehaviour
             var chattingUI = objChatUI.GetComponent<ChattingUI>();
             if(chattingUI != null )
             {
-                //  chattingUI.SetLocalPlayerName(_playerName);
+                chattingUI.SetLocalPlayerName(_playerName);
             }
         }
     }

@@ -291,7 +291,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7350647434325875932}
+        m_TargetAssemblyTypeName: LoginPopup, Assembly-CSharp
+        m_MethodName: OnValueChanged_ToggleButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -316,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5765084788391095771
 Transform:
   m_ObjectHideFlags: 0
@@ -663,7 +675,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1312907578892159400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7350647434325875932}
+        m_TargetAssemblyTypeName: LoginPopup, Assembly-CSharp
+        m_MethodName: OnClick_StartAsHost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2079421036318153902
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7011337611464341670
 Transform:
   m_ObjectHideFlags: 0
@@ -919,7 +943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1202495144698041541
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,7 +1380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6859037504261917481
 Transform:
   m_ObjectHideFlags: 0
@@ -1544,7 +1568,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8193377959551504332}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7350647434325875932}
+        m_TargetAssemblyTypeName: LoginPopup, Assembly-CSharp
+        m_MethodName: OnClick_StartClient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4936843124018797068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +1785,7 @@ MonoBehaviour:
   Btn_StartAsHostServer: {fileID: 6215967083090530829}
   Btn_StartAsClient: {fileID: 6753090489929354167}
   Text_Error: {fileID: 884701590420312576}
+  _netManager: {fileID: 0}
 --- !u!1 &5436516386458296929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,7 +1923,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7350647434325875932}
+        m_TargetAssemblyTypeName: LoginPopup, Assembly-CSharp
+        m_MethodName: OnValueChanged_ToggleButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -1990,7 +2039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1660462302829179183
 Transform:
   m_ObjectHideFlags: 0

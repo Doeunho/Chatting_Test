@@ -13,8 +13,12 @@ public class NetworkingManager : NetworkManager
 
     public override void OnServerDisconnect(NetworkConnectionToClient conn)
     {
-        
+        if (_chattingUI != null)
+        {
+            _chattingUI.RemoveNameOnServerDisconnect(conn);
+        }
 
+        base.OnServerDisconnect(conn);
     }
 
     public override void OnClientDisconnect()

@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -81, y: -260}
-  m_SizeDelta: {x: 929, y: 43.1}
+  m_AnchoredPosition: {x: -59.534, y: -260}
+  m_SizeDelta: {x: 886.07, y: 43.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2156928807496648459
 CanvasRenderer:
@@ -131,13 +131,37 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9192507591736518325}
+        m_TargetAssemblyTypeName: ChattingUI, Assembly-CSharp
+        m_MethodName: OnEndEdit_SendMsg
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnDidEndEdit:
     m_PersistentCalls:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9192507591736518325}
+        m_TargetAssemblyTypeName: ChattingUI, Assembly-CSharp
+        m_MethodName: OnValueChanged_ToggleBetton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -784,7 +808,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3188370178874243540}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.5152421
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -825,8 +849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: -259}
-  m_SizeDelta: {x: 138.5, y: 43.1}
+  m_AnchoredPosition: {x: 452.0758, y: -259.5}
+  m_SizeDelta: {x: 112.7102, y: 44.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4670807551114537556
 CanvasRenderer:
@@ -909,7 +933,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6905262250699582663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9192507591736518325}
+        m_TargetAssemblyTypeName: ChattingUI, Assembly-CSharp
+        m_MethodName: OnClick_SnedMsg
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4348684477273884122
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,8 +983,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2}
-  m_SizeDelta: {x: 1091.1, y: 435.9}
+  m_AnchoredPosition: {x: -2.1491, y: -6.4475}
+  m_SizeDelta: {x: 1000.8361, y: 423.0051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4902857038204824497
 CanvasRenderer:
@@ -1054,7 +1090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 551.87, y: 268}
+  m_AnchoredPosition: {x: 496, y: 263.65}
   m_SizeDelta: {x: 46.6, y: 44.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4728485347753323680
@@ -1138,7 +1174,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5429781390149317044}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9192507591736518325}
+        m_TargetAssemblyTypeName: ChattingUI, Assembly-CSharp
+        m_MethodName: OnClick_Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5960864641064498638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,7 +1299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.00000500679}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6642099591866419764
@@ -1267,6 +1315,7 @@ GameObject:
   - component: {fileID: 7054181070703618616}
   - component: {fileID: 1945318486111116303}
   - component: {fileID: 9192507591736518325}
+  - component: {fileID: 9207317276978461275}
   m_Layer: 5
   m_Name: ChattingUI
   m_TagString: Untagged
@@ -1373,9 +1422,26 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   Text_ChatHistory: {fileID: 7342983338323152566}
-  ScrollBar_Chat: {fileID: 2579622066389136764}
+  Scrollbar_Chat: {fileID: 2579622066389136764}
   Input_ChatMsg: {fileID: 3913552972481199916}
   Btn_Send: {fileID: 4398798639747094449}
+--- !u!114 &9207317276978461275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642099591866419764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 1795150810
+  serverOnly: 0
+  visibility: 0
+  hasSpawned: 0
 --- !u!1 &7235966112500490825
 GameObject:
   m_ObjectHideFlags: 0

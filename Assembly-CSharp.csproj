@@ -61,8 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\ChattingUI.cs" />
-    <Compile Include="Assets\Script\NetworkManager.cs" />
+    <Compile Include="Assets\Script\NetworkingAuthenticator_Client.cs" />
+    <Compile Include="Assets\Script\NetworkingAuthenticator.cs" />
     <Compile Include="Assets\Script\LoginPopup.cs" />
+    <Compile Include="Assets\Script\NetworkingManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

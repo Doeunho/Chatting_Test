@@ -1,10 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
-using Mirror.Examples.Chat;
 using System.Collections.Generic;
 using System.Collections;
-
 
 
 public class ChattingUI : NetworkBehaviour
@@ -53,6 +51,11 @@ public class ChattingUI : NetworkBehaviour
     public void OnClick_Exit()
     {
         NetworkManager.singleton.StopHost();
+    }
+
+    public void RemoveNameOnServerDisconnect(NetworkConnectionToClient conn)
+    {
+        _connectedNameDic.Remove(conn);
     }
 
     [ClientRpc]

@@ -68,6 +68,25 @@ public class LoginPopup : MonoBehaviour
         }
     }
 
+    //Disconnect 시 로그인 팝업 관련 UI 처리
+    public void SetUIOnClientDisconnected()
+    {
+        this.gameObject.SetActive(true);
+        Input_UserName.text = string.Empty;
+        Input_UserName.ActivateInputField();
+    }
+
+    public void SetUiOnAuthValueChanged()
+    {
+        Text_Error.text = string.Empty;
+        Text_Error.gameObject.SetActive(false);
+    }
+
+    public void SetUIOnAuthError(string msg)
+    {
+        Text_Error.text = msg;
+        Text_Error.gameObject.SetActive(true);
+    }
 
     //로그인 팝업 유저이름 변경 시 처리
     public void OnValueChanged_ToggleButton(string userName)

@@ -60,12 +60,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.22f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\ChatUser.cs" />
-    <Compile Include="Assets\Script\ChattingUI.cs" />
-    <Compile Include="Assets\Script\NetworkingAuthenticator_Client.cs" />
-    <Compile Include="Assets\Script\NetworkingAuthenticator.cs" />
-    <Compile Include="Assets\Script\LoginPopup.cs" />
-    <Compile Include="Assets\Script\NetworkingManager.cs" />
+    <Compile Include="Assets\Chatting\Script\NetworkingManager.cs" />
+    <Compile Include="Assets\Chatting\Script\ChattingUI.cs" />
+    <Compile Include="Assets\Chatting\Script\ChatUser.cs" />
+    <Compile Include="Assets\NetDoggie\New Folder\Script\NetSpawnedObject.cs" />
+    <Compile Include="Assets\Chatting\Script\NetworkingAuthenticator.cs" />
+    <Compile Include="Assets\Chatting\Script\LoginPopup.cs" />
+    <Compile Include="Assets\Chatting\Script\NetworkingAuthenticator_Client.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
@@ -1060,10 +1061,6 @@
     <ProjectReference Include="Mirror.Authenticators.csproj">
       <Project>{7948F42A-6452-462D-766D-1701BA190127}</Project>
       <Name>Mirror.Authenticators</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{C8D37E66-64E7-9BE8-478D-A50075559D05}</Project>
-      <Name>Mirror.Examples</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Hosting.csproj">
       <Project>{A03C3947-1132-309E-C765-8F37EC24D8EF}</Project>

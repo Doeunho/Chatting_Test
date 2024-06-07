@@ -106,6 +106,7 @@ public class LoginPopup : MonoBehaviour
             return;
 
         _netManager.StartHost();
+        this.gameObject.SetActive(false);
     }
 
     public void OnClick_StartClient()
@@ -114,5 +115,6 @@ public class LoginPopup : MonoBehaviour
             return;
 
         _netManager.StartClient();
+        this.gameObject.SetActive(false);
     }
 }

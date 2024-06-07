@@ -26,12 +26,14 @@ public class ChattingUI : NetworkBehaviour
 
     public override void OnStartServer()
     {
+        this.gameObject.SetActive(true);
         _connectedNameDic.Clear();
     }
 
     //채팅 UI 클라 시작 시 채팅목록 내용 초기화
     public override void OnStartClient()
     {
+        this.gameObject.SetActive(true);
         Text_ChatHistory.text = string.Empty;
     }
 

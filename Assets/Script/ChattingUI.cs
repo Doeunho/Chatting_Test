@@ -19,6 +19,11 @@ public class ChattingUI : NetworkBehaviour
     //채팅 UI 연결된 플레이어 정보를 관리할 컨테이너 추가
     internal static readonly Dictionary<NetworkConnectionToClient, string> _connectedNameDic = new Dictionary<NetworkConnectionToClient, string>();
 
+    public void SetLocalPlayerName(string userName)
+    {
+        _localPlayerName = userName;
+    }
+
     public override void OnStartServer()
     {
         _connectedNameDic.Clear();
@@ -36,8 +41,8 @@ public class ChattingUI : NetworkBehaviour
     {
         if (!_connectedNameDic.ContainsKey(sender))
         {
-            var player = sender.identity.GetComponent<Player>();
-            var playerName = player.playerName;
+            var player = sender.identity.GetComponent<ChatUser>();
+            var playerName = player._playerName;
             _connectedNameDic.Add(sender, playerName);
         }
         //채팅 UI / 메세지 응답 브로드캐스팅

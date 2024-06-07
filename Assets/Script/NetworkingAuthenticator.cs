@@ -4,7 +4,7 @@ using UnityEngine;
 using Mirror;
 using Mirror.SimpleWeb;
 
-public class NetworkingAuthenticator : NetworkAuthenticator
+public partial class NetworkingAuthenticator : NetworkAuthenticator
 {
     
     readonly HashSet<NetworkConnection> _connentionsPendingDisconnect = new HashSet<NetworkConnection>();

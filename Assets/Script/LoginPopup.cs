@@ -12,6 +12,8 @@ public class LoginPopup : MonoBehaviour
 
     [SerializeField] internal Text Text_Error;
 
+    [SerializeField] NetworkingManager _netManager;
+
     public static LoginPopup Instance { get; private set; }
 
     private string _originNetworkAddress;
@@ -94,5 +96,23 @@ public class LoginPopup : MonoBehaviour
         bool isUserNameValid = !string.IsNullOrWhiteSpace(userName);
         Btn_StartAsHostServer.interactable = isUserNameValid;
         Btn_StartAsClient.interactable = isUserNameValid;
+    }
+
+
+    //호스트, 클라이언트 서버시작 OnClick 이벤트 추가
+    public void OnClick_StartAsHost()
+    {
+        if (_netManager == null)
+            return;
+
+        _netManager.StartHost();
+    }
+
+    public void OnClick_StartClient()
+    {
+        if( _netManager == null)
+            return;
+
+        _netManager.StartClient();
     }
 }

@@ -385,6 +385,7 @@
 "Assets/Chatting/Script/NetworkingAuthenticator_Client.cs"
 "Assets/Chatting/Script/NetworkingManager.cs"
 "Assets/NetDoggie/Script/NetSpawnedObject.cs"
+"Assets/NetDoggie/Script/NetSpawnSubObject.cs"
 -langversion:9.0
 
 /deterministic

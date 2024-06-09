@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Chatting\Script\NetworkingManager.cs" />
     <Compile Include="Assets\Chatting\Script\ChattingUI.cs" />
+    <Compile Include="Assets\NetDoggie\Script\NetSpawnSubObject.cs" />
     <Compile Include="Assets\Chatting\Script\ChatUser.cs" />
     <Compile Include="Assets\NetDoggie\Script\NetSpawnedObject.cs" />
     <Compile Include="Assets\Chatting\Script\NetworkingAuthenticator.cs" />

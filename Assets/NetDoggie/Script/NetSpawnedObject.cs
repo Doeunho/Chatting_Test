@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using UnityEngine.AI;
+using Unity.VisualScripting;
 
 public class NetSpawnedObject : NetworkBehaviour
 {
@@ -19,6 +20,8 @@ public class NetSpawnedObject : NetworkBehaviour
     public KeyCode _atkKey = KeyCode.Space;
     public GameObject Prefab_AtkObject;
     public Transform Transform_AtkSpawnPos;
+
+
 
     [Header("Stats Server")]
     [SyncVar] public int _health = 4;
@@ -86,19 +89,29 @@ public class NetSpawnedObject : NetworkBehaviour
     [Command]
     void CommandAtk()
     {
-
+        GameObject atkObjectForSpawn = Instantiate(Prefab_AtkObject, Transform_AtkSpawnPos.transform.position, Transform_AtkSpawnPos.transform.rotation);
+        NetworkServer.Spawn(atkObjectForSpawn);
     }
 
-    [Command]
+    [ClientRpc]
     void RpcOnAtk()
     {
-
+        Animator_Player.SetTrigger("Atk");
     }
 
     //클라에서 다음 함수가 실행되지 않도록 ServerCallBack 달아줌
     [ServerCallback]
     private void OnTriggerEnter(Collider other)
     {
-        
+        var atkGenObject = other.GetComponent<GameObject>();
+        if(atkGenObject != null)
+        {
+            _health--;
+            if( _health == 0)
+            {
+                NetworkServer.Destroy(this.gameObject);
+            }
+        }
+            
     }
 }

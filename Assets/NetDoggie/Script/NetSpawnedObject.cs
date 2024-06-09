@@ -67,7 +67,18 @@ public class NetSpawnedObject : NetworkBehaviour
             CommandAtk();
         }
 
-        //RotatePlayer();
+        RotateLocalPlayer();
+    }
+
+    void RotateLocalPlayer()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(ray, out RaycastHit hit, 100))
+        {
+            Debug.DrawLine(ray.origin, hit.point);
+            Vector3 lookRotate = new Vector3(hit.point.x , Transform_Player.position.y , hit.point.z);
+            Transform_Player.LookAt(lookRotate);
+        }
     }
 
     //서버사이드

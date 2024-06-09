@@ -103,7 +103,7 @@ public class NetSpawnedObject : NetworkBehaviour
     [ServerCallback]
     private void OnTriggerEnter(Collider other)
     {
-        var atkGenObject = other.GetComponent<GameObject>();
+        var atkGenObject = other.GetComponent<NetSpawnSubObject>();
         if(atkGenObject != null)
         {
             _health--;

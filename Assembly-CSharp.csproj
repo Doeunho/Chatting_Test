@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D33F78F9-B10D-3CF7-233F-0F92EC4EA002}</ProjectGuid>
+    <ProjectGuid>{90617B66-468C-A4B5-8C0C-DA4BA1E662CE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,8 +60,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.22f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\ChattingUI.cs" />
-    <Compile Include="Assets\Script\LoginPopup.cs" />
+    <Compile Include="Assets\Chatting\Script\NetworkingManager.cs" />
+    <Compile Include="Assets\Chatting\Script\ChattingUI.cs" />
+    <Compile Include="Assets\Chatting\Script\ChatUser.cs" />
+    <Compile Include="Assets\NetDoggie\Script\NetSpawnedObject.cs" />
+    <Compile Include="Assets\Chatting\Script\NetworkingAuthenticator.cs" />
+    <Compile Include="Assets\Chatting\Script\LoginPopup.cs" />
+    <Compile Include="Assets\Chatting\Script\NetworkingAuthenticator_Client.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
@@ -1022,51 +1027,47 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.Editor.csproj">
-      <Project>{6E91B2D3-2D7A-D5AF-AF8B-425D641A67D7}</Project>
+      <Project>{2AD9AF4A-3E17-06A2-2A0B-F1D7E872D95E}</Project>
       <Name>Mirror.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="EncryptionTransportEditor.csproj">
-      <Project>{48627FFE-4105-4FDE-153A-3167109BEF3D}</Project>
+      <Project>{23E05F0F-7781-5A84-5014-4F93CCEA48B0}</Project>
       <Name>EncryptionTransportEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{DFC2E71D-8922-2429-E0BA-61ECC5974778}</Project>
+      <Project>{AD14D169-C113-4615-EC70-D0AC76734010}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Transports.csproj">
-      <Project>{87FD3AE9-2A1C-A9C2-AE75-8392D8DEA659}</Project>
+      <Project>{105DA567-58ED-5795-06A2-B2EC93A624FD}</Project>
       <Name>Mirror.Transports</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{53343FE1-B997-8683-2142-A54FCE24E666}</Project>
+      <Project>{AEE5A6AB-2C17-9447-CA74-7CEAFCC6F102}</Project>
       <Name>Mirror.Components</Name>
     </ProjectReference>
     <ProjectReference Include="Telepathy.csproj">
-      <Project>{89F3F3B9-6CA7-106B-4F87-6546698720C2}</Project>
+      <Project>{0138C5C4-BF37-E681-2477-07CBA4298BE8}</Project>
       <Name>Telepathy</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
-      <Project>{F439816D-C52B-5125-8245-F5B0AB96DA6A}</Project>
+      <Project>{6E970D63-025F-ECDD-905F-4ECCBD3856BC}</Project>
       <Name>SimpleWebTransport</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.CompilerSymbols.csproj">
-      <Project>{3F9D8792-1EA1-3D10-88F9-085CB77825BE}</Project>
+      <Project>{E11B4587-959F-A44C-DB5A-21DA714688AA}</Project>
       <Name>Mirror.CompilerSymbols</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Authenticators.csproj">
-      <Project>{D527E3D0-31DB-AD19-AE73-CDB8527D8F7D}</Project>
+      <Project>{7948F42A-6452-462D-766D-1701BA190127}</Project>
       <Name>Mirror.Authenticators</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{78FCB87A-8198-1FA4-6B52-89D7044AA67D}</Project>
-      <Name>Mirror.Examples</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.Hosting.csproj">
-      <Project>{1807C8DF-68C6-D397-E68D-5A0A066C99EC}</Project>
+      <Project>{A03C3947-1132-309E-C765-8F37EC24D8EF}</Project>
       <Name>Mirror.Hosting</Name>
     </ProjectReference>
     <ProjectReference Include="kcp2k.csproj">
-      <Project>{E4B780C5-17A8-CF7A-B7F4-9D391D85CE30}</Project>
+      <Project>{6E45726B-86CB-3DAD-BD6D-0E078FE109A4}</Project>
       <Name>kcp2k</Name>
     </ProjectReference>
   </ItemGroup>

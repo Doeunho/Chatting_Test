@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{48627FFE-4105-4FDE-153A-3167109BEF3D}</ProjectGuid>
+    <ProjectGuid>{23E05F0F-7781-5A84-5014-4F93CCEA48B0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>EncryptionTransportEditor</AssemblyName>
@@ -404,10 +404,6 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.22f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.WebGL.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.22f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
@@ -997,7 +993,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.Transports.csproj">
-      <Project>{87FD3AE9-2A1C-A9C2-AE75-8392D8DEA659}</Project>
+      <Project>{105DA567-58ED-5795-06A2-B2EC93A624FD}</Project>
       <Name>Mirror.Transports</Name>
     </ProjectReference>
   </ItemGroup>
